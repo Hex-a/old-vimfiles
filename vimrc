@@ -23,7 +23,7 @@ set nobackup
 set noswapfile
 set colorcolumn=80
 set textwidth=78
-set shortmess=aoOstTwAI
+set shortmess=aoOstTwWAI
 set foldmethod=syntax
 set laststatus=2
 set encoding=utf-8
@@ -32,6 +32,7 @@ set columns=82
 set lines=60
 set scrolloff=8
 set cursorline
+set backspace=2
 
 " Indentation
 set autoindent
