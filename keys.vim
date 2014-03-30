@@ -29,3 +29,4 @@ nnoremap <Leader>w :w<CR>
 vmap <Leader>y "+y
 nmap <Leader>p "+p
 nmap <Leader>P "+P
+nmap <silent> --h :help <cword> cr>
