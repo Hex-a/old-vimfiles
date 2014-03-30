@@ -9,7 +9,12 @@ nnoremap <leader>r :w <cr> :source %<cr>
 nnoremap <leader>h :Startify<cr>
 nnoremap - : 
 nnoremap <tab> :
-nnoremap <F12> :tabnew! ~/.vimrc<cr>
+if has('win32')
+    " We really should make this more transparent
+    nnoremap <F12> :tabnew! $HOME/_vimrc<cr>
+else
+    nnoremap <F12> :tabnew! $HOME/.vimrc<cr>
+end
 for x in range(1,10)
     execute "nnoremap <silent><M-".x."> :".x."wincmd w<CR>"
     execute "nnoremap <silent><leader>t".x." ".x."gt"

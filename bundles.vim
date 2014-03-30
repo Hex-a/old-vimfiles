@@ -21,6 +21,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'nvie/vim-flake8'
+Bundle 'mattn/emmet-vim'
 
 let g:ctrlp_user_command = ['.git',
       \'cd %s && git ls-files . -co --exclude-standard',
