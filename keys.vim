@@ -24,8 +24,6 @@ endfor
 inoremap jk <esc>
 
 " Command mode
-cmap <C-a> <home>
-cmap <C-e> <end>
 cmap <C-k> <Up>
 cmap <C-j> <Down>
 
@@ -35,3 +33,13 @@ vmap <Leader>y "+y
 nmap <Leader>p "+p
 nmap <Leader>P "+P
 nmap <silent> --h :help <cword> cr>
+
+vnoremap Q y5vspi<C-r>=<C-r>"<cr><esc>
+
+function! Calculate()
+    let l:line = line('.')
+    normal vE
+    execute "10 vsp a"
+    call append(0, repeat([''], l:line))
+    normal i <C-r>=<C-r>"<cr> <esc>
+endf

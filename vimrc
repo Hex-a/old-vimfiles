@@ -8,6 +8,7 @@ end
 source $HOME/$VIMFILES/bundles.vim
 source $HOME/$VIMFILES/keys.vim
 source $HOME/$VIMFILES/abbrs.vim
+    
 " -------------------------------------------------------------------------- 
 " General
 set wildmenu
@@ -28,8 +29,6 @@ set foldmethod=syntax
 set laststatus=2
 set encoding=utf-8
 set spellsuggest=fast,10
-set columns=82
-set lines=60
 set scrolloff=8
 set cursorline
 set backspace=2
@@ -42,16 +41,25 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+set guicursor+=a:blinkon0
+
 " GUI
 set go=-m
 set go=-t
-colorscheme jellybeans
+set background=dark
 
 " Specificities
 if has('win32') 
   set guifont=Consolas\ for\ Powerline\ FixedD:h9
+  set lines=60
 else
-  set guifont=Monaco\ for\ Powerline\ 8
+  set guifont=Menlo\ Bold\ 9
 end
+
+if has('X11')
+    set columns=90
+endif
+
+colorscheme hemisu
 
 set re=1 " Fixes slow rendering when editing ruby files
